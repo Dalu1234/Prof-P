@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 function countSyllables(word) {
     word = word.toLowerCase();
     if (word.length <= 3) return 1;
@@ -65,7 +65,7 @@ function countSyllables(word) {
   
         summaryDiv.innerText = "Summarizing using Groq...";
 
-        const apiKey = "Bearer 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"; // ** SECURITY RISK **
+        const apiKey = process.env.API_KEY; 
         const apiUrl = "https://api.groq.com/openai/v1/chat/completions";
         const modelName = "llama3-8b-8192";
   
