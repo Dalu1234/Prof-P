@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Privacy Awareness",
+    "version": "1.0",
+    "description": "Highlights legal jargon and simplifies privacy policies using AI.",
+    "permissions": ["activeTab", "scripting", "storage", "windows"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_icon": "icon.png"
+    },
+    "background": {
+  "service_worker": "background.js"
+},
+    "web_accessible_resources": [
+  {
+    "resources": ["popup.html"],
+    "matches": ["<all_urls>"]
+  }
+]
+  }
+  
